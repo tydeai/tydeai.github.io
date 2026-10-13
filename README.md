@@ -32,8 +32,8 @@ The site will be available at `https://tydeai.github.io/`. The `.nojekyll` file 
 
 ## Content and integrations
 
-- Page content, portraits, service imagery and audience graphics are based on [Tyde’s original website](https://www.tyde-ai.com/). Fonts and images are stored locally in `assets/`.
-- Newsletter signup opens the original Tyde newsletter page in a new tab. Its Framer form depends on Framer’s runtime and cannot be copied as a working static HTML form. To host signup here, connect a newsletter provider first. Replace this outbound link before moving `www.tyde-ai.com` itself to this repository, or it would link back to the same page.
+- Page content, portraits, service imagery and audience graphics are based on Tyde’s website. Fonts and images are stored locally in `assets/`.
+- Newsletter signup currently opens an email to Tyde; connect a newsletter provider to host signup directly here.
 - The resource workshop uses a local poster and loads YouTube’s privacy-enhanced embed only when Play is selected. A direct YouTube link remains available if embedding is blocked or JavaScript is disabled.
 - Service enquiries open an email to `info@tydeai.com`; job application links open Tyde’s LinkedIn page, as on the reference site. There is no local form backend.
 - Careers and workshop information reflect the reference pages at implementation time; update them as listings and events change.
