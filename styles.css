@@ -43,6 +43,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -178,7 +179,8 @@ blockquote {
 }
 
 .primary-nav a:hover::after,
-.primary-nav a:focus-visible::after {
+.primary-nav a:focus-visible::after,
+.primary-nav a[aria-current="page"]::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -218,6 +220,26 @@ blockquote {
 
 .menu-toggle {
   display: none;
+}
+
+.primary-nav .mobile-nav-cta {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 5px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .hero {
@@ -822,18 +844,18 @@ blockquote {
   font-size: 12px;
 }
 
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 700ms var(--ease), transform 700ms var(--ease);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.hero .reveal {
+.js .hero .reveal {
   opacity: 1;
   transform: none;
 }
@@ -920,6 +942,7 @@ blockquote {
     padding: 100px max(24px, calc((100vw - 760px) / 2));
     background: var(--navy);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-16px);
     transition: opacity 240ms ease, transform 240ms var(--ease);
@@ -927,6 +950,7 @@ blockquote {
 
   .primary-nav.is-open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
@@ -936,6 +960,46 @@ blockquote {
     font-size: clamp(30px, 7vw, 54px);
     font-weight: 400;
     letter-spacing: -0.035em;
+  }
+
+  .primary-nav .mobile-nav-cta {
+    display: inline-flex;
+    margin-top: 18px;
+    color: var(--violet-light);
+    font-size: 22px;
+  }
+
+  html:not(.js) .site-header {
+    position: relative;
+    background: var(--paper);
+  }
+
+  html:not(.js) .nav-shell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  html:not(.js) .menu-toggle {
+    display: none;
+  }
+
+  html:not(.js) .primary-nav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    background: transparent;
+  }
+
+  html:not(.js) .primary-nav a {
+    color: var(--navy);
+    font-size: 16px;
   }
 
   .services-layout {
@@ -1111,7 +1175,7 @@ blockquote {
     transition-duration: 0.01ms !important;
   }
 
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
   }

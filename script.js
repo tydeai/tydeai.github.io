@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".primary-nav");
@@ -10,12 +12,17 @@ const updateHeader = () => {
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 
-const closeMenu = () => {
+const menuBackground = document.querySelectorAll("main, footer");
+const mobileNavigation = window.matchMedia("(max-width: 960px)");
+
+const closeMenu = (restoreFocus = false) => {
   if (!menuToggle || !navigation) return;
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open navigation");
   navigation.classList.remove("is-open");
   document.body.classList.remove("nav-open");
+  menuBackground.forEach((element) => { element.inert = false; });
+  if (restoreFocus) menuToggle.focus();
 };
 
 menuToggle?.addEventListener("click", () => {
@@ -24,11 +31,25 @@ menuToggle?.addEventListener("click", () => {
   menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
   navigation?.classList.toggle("is-open", !isOpen);
   document.body.classList.toggle("nav-open", !isOpen);
+  menuBackground.forEach((element) => { element.inert = !isOpen; });
 });
 
-navigation?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+navigation?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => closeMenu()));
+mobileNavigation.addEventListener("change", () => closeMenu());
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+  if (menuToggle?.getAttribute("aria-expanded") !== "true") return;
+  if (event.key === "Escape") closeMenu(true);
+  if (event.key === "Tab") {
+    const links = [...navigation.querySelectorAll("a")];
+    const lastLink = links[links.length - 1];
+    if (event.shiftKey && document.activeElement === menuToggle) {
+      event.preventDefault();
+      lastLink?.focus();
+    } else if (!event.shiftKey && document.activeElement === lastLink) {
+      event.preventDefault();
+      menuToggle.focus();
+    }
+  }
 });
 
 const typewriter = document.querySelector("[data-typewriter]");
@@ -144,3 +165,19 @@ showSlide(0);
 
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = String(new Date().getFullYear());
+
+// Load YouTube only after an explicit play action. The link also works without JS.
+document.querySelector("[data-video-play]")?.addEventListener("click", (event) => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const player = document.querySelector("[data-video-player]");
+  if (!player) return;
+  event.preventDefault();
+  const iframe = document.createElement("iframe");
+  iframe.src = "https://www.youtube-nocookie.com/embed/TxkcoPLQ5YA?autoplay=1&rel=0&playsinline=1";
+  iframe.title = "How to create proposal decks with Claude — Tyde workshop";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.allowFullscreen = true;
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  player.replaceChildren(iframe);
+  iframe.focus();
+});

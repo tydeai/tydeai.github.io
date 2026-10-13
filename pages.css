@@ -1,0 +1,627 @@
+/* Shared styling for the four static inner pages. */
+.inner-page .button {
+  gap: 14px;
+}
+
+.button--light {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.button--light:hover {
+  background: #ddd6fa;
+}
+
+.page-intro {
+  padding: 166px 0 64px;
+}
+
+.page-title {
+  margin-bottom: 62px;
+  font-size: clamp(48px, 5.6vw, 80px);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.page-kicker {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.page-kicker::before {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--violet);
+  content: "";
+}
+
+.intro-copy h2 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+}
+
+.intro-copy > p {
+  margin-top: 34px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #494949;
+}
+
+.accent-text {
+  color: var(--violet);
+}
+
+/* About */
+.audience-section {
+  padding: 40px 0 44px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.audience-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.leadership-section {
+  padding: 44px 0 80px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 1080px;
+  margin: 58px auto 0;
+}
+
+.team-card {
+  padding: 24px 40px 30px;
+  background: var(--white);
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: bottom;
+  margin-bottom: 12px;
+}
+
+.team-card h3 {
+  color: #595959;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.team-card p {
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.careers-section {
+  padding: 54px 0 100px;
+  background: var(--white);
+}
+
+.careers-section > .section-shell > .page-kicker {
+  justify-content: center;
+}
+
+.careers-section h2 {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.job-list {
+  display: grid;
+  gap: 28px;
+  max-width: 780px;
+  margin: 50px auto 0;
+}
+
+.job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px;
+  background: #f8f8fa;
+}
+
+.job-card h3 {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.job-card p {
+  margin-top: 16px;
+  color: #666;
+}
+
+.job-card .button {
+  flex-shrink: 0;
+  padding-inline: 24px;
+}
+
+/* Services */
+.service-detail {
+  padding: 72px 0 42px;
+  border-bottom: 32px solid var(--paper);
+  background: #e8e8e8;
+}
+
+.service-detail:last-child {
+  border-bottom: 0;
+  margin-bottom: 120px;
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.service-detail-copy > p {
+  margin-top: 20px;
+  color: #555;
+  line-height: 1.65;
+}
+
+.service-detail-copy > .page-kicker + p {
+  margin-top: 30px;
+}
+
+.service-detail-copy .button {
+  margin-top: 28px;
+  font-size: 15px;
+}
+
+.service-detail-image {
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+  justify-self: start;
+  margin-left: 24px;
+}
+
+/* Newsletter */
+.newsletter-signup {
+  min-height: 660px;
+  padding: 180px 24px 96px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.newsletter-signup-inner {
+  max-width: 580px;
+}
+
+.briefing-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.newsletter-signup h1 {
+  margin-top: 18px;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.newsletter-signup h1 em {
+  color: var(--violet);
+}
+
+.signup-heading {
+  margin-top: 28px;
+  color: #737373;
+  font-size: 30px;
+  letter-spacing: -0.025em;
+}
+
+.signup-description {
+  max-width: 430px;
+  margin: 20px auto 0;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.signup-button {
+  margin-top: 28px;
+}
+
+.signup-note {
+  max-width: 340px;
+  margin: 16px auto 0;
+  color: #727272;
+  font-size: 12px;
+}
+
+/* Resource hub */
+.briefing-banner {
+  position: relative;
+  overflow: hidden;
+  margin-top: 66px;
+  padding: 72px 62px;
+  background: #111025;
+  color: var(--white);
+}
+
+.briefing-waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  color: #2c294f;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.briefing-content {
+  position: relative;
+  z-index: 1;
+}
+
+.briefing-content h2 {
+  margin-top: 24px;
+  color: #b5a5ed;
+  font-size: clamp(32px, 4.6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.briefing-content h2 em {
+  color: var(--white);
+}
+
+.briefing-content > p:not(.briefing-kicker) {
+  max-width: 590px;
+  margin-top: 32px;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.briefing-content .button {
+  margin-top: 32px;
+}
+
+.workshop-section {
+  padding: 64px 0 80px;
+  background: var(--white);
+}
+
+.workshop-panel {
+  padding: 68px 80px 42px;
+  background: #d4d3db;
+}
+
+.workshop-copy h2 {
+  max-width: 860px;
+  margin-top: 28px;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.workshop-date {
+  margin-top: 26px;
+  font-size: 18px;
+}
+
+.workshop-copy > p:last-child {
+  max-width: 830px;
+  margin-top: 26px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.video-player {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 40px;
+  background: var(--navy);
+}
+
+.video-poster {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.video-poster img,
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.video-poster:focus-visible {
+  outline-offset: -5px;
+}
+
+.video-play-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 56px;
+  padding-left: 4px;
+  border-radius: 14px;
+  background: #f03;
+  color: #fff;
+  font-size: 27px;
+  transition: transform 200ms ease;
+}
+
+.video-poster:hover .video-play-icon {
+  transform: scale(1.1);
+}
+
+.video-fallback {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 15px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 960px) {
+  .page-intro {
+    padding-top: 146px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .intro-copy h2 {
+    max-width: 700px;
+  }
+
+  .team-card {
+    padding: 18px 20px 24px;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 36px;
+  }
+
+  .service-detail-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    margin-left: 0;
+  }
+
+  .briefing-banner {
+    padding: 54px 40px;
+  }
+
+  .workshop-panel {
+    padding: 48px 40px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-intro {
+    padding: 140px 0 48px;
+  }
+
+  .page-title {
+    margin-bottom: 42px;
+    font-size: 46px;
+  }
+
+  .page-kicker {
+    gap: 9px;
+    font-size: 15px;
+  }
+
+  .page-kicker::before {
+    flex-basis: 6px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .intro-copy h2 {
+    font-size: 26px;
+  }
+
+  .intro-copy > p {
+    margin-top: 24px;
+    font-size: 17px;
+  }
+
+  .audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .leadership-section {
+    padding: 40px 0 48px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 370px;
+    margin-top: 30px;
+  }
+
+  .team-card {
+    padding: 24px 36px 28px;
+  }
+
+  .careers-section {
+    padding: 48px 0 64px;
+  }
+
+  .careers-section h2 {
+    font-size: 42px;
+  }
+
+  .job-list {
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .job-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    padding: 26px;
+  }
+
+  .job-card h3 {
+    font-size: 21px;
+  }
+
+  .job-card p {
+    margin-top: 10px;
+  }
+
+  .service-detail {
+    padding: 42px 0;
+    border-bottom-width: 20px;
+  }
+
+  .service-detail:last-child {
+    margin-bottom: 64px;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .service-detail-image {
+    max-width: 300px;
+    justify-self: center;
+  }
+
+  .service-detail-copy .button {
+    max-width: 100%;
+    padding: 14px 22px;
+    text-align: center;
+  }
+
+  .newsletter-signup {
+    min-height: 650px;
+    padding: 156px 20px 76px;
+    text-align: left;
+  }
+
+  .newsletter-signup h1 {
+    font-size: 34px;
+  }
+
+  .briefing-kicker {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+  }
+
+  .signup-heading {
+    font-size: 26px;
+  }
+
+  .signup-description,
+  .signup-note {
+    margin-left: 0;
+  }
+
+  .briefing-banner {
+    margin-top: 40px;
+    padding: 42px 24px;
+  }
+
+  .briefing-waves {
+    opacity: 0.4;
+  }
+
+  .briefing-content h2 {
+    max-width: 320px;
+    font-size: 44px;
+    line-height: 1.1;
+  }
+
+  .briefing-content > p:not(.briefing-kicker) {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .workshop-section {
+    padding: 36px 0 48px;
+  }
+
+  .workshop-panel {
+    padding: 30px 20px 26px;
+  }
+
+  .workshop-copy h2 {
+    margin-top: 22px;
+    font-size: 28px;
+    overflow-wrap: anywhere;
+  }
+
+  .workshop-date,
+  .workshop-copy > p:last-child {
+    font-size: 17px;
+  }
+
+  .video-player {
+    margin-top: 28px;
+  }
+
+  .video-play-icon {
+    width: 58px;
+    height: 42px;
+    font-size: 22px;
+  }
+}
