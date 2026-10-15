@@ -226,6 +226,7 @@
 }
 
 .newsletter-signup-inner {
+  width: 100%;
   max-width: 580px;
 }
 
@@ -263,15 +264,120 @@
   line-height: 1.6;
 }
 
-.signup-button {
-  margin-top: 28px;
-}
-
 .signup-note {
   max-width: 340px;
   margin: 16px auto 0;
   color: #727272;
   font-size: 12px;
+}
+
+.kit-form-embed {
+  width: 100%;
+  min-height: 80px;
+  margin-top: 28px;
+}
+
+.kit-form-embed noscript .button {
+  margin-top: 4px;
+}
+
+/* Kit injects its own inline theme; these overrides keep the working form on-brand. */
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 580px !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] [data-style="minimal"] {
+  padding: 0 !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-header,
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-subheader,
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-guarantee {
+  display: none !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-fields {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  margin: 0 !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-field,
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit {
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-input {
+  width: 100% !important;
+  height: 56px !important;
+  padding: 0 20px !important;
+  border: 1px solid #d5d5d2 !important;
+  border-radius: 999px !important;
+  background: var(--white) !important;
+  color: var(--ink) !important;
+  font-family: "Satoshi", Arial, sans-serif !important;
+  font-size: 16px !important;
+  outline: 0 !important;
+  transition: border-color 180ms ease, box-shadow 180ms ease !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-input:focus {
+  border-color: var(--violet) !important;
+  box-shadow: 0 0 0 3px rgba(114, 101, 209, 0.18) !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit {
+  min-height: 56px !important;
+  padding: 0 28px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: var(--navy) !important;
+  color: var(--white) !important;
+  font-family: "Satoshi", Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: background 180ms ease, transform 180ms var(--ease) !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit:hover,
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit:focus-visible {
+  background: var(--violet) !important;
+  transform: translateY(-2px) !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-alert {
+  margin: 0 0 14px !important;
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  font-family: "Satoshi", Arial, sans-serif !important;
+  font-size: 14px !important;
+  text-align: left !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-alert-success {
+  border: 1px solid #a7d8b5 !important;
+  background: #edf8f0 !important;
+  color: #174c27 !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-alert-error {
+  color: #8b1e2d !important;
+}
+
+.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-powered-by-convertkit-container {
+  margin-top: 12px !important;
+  opacity: 0.58 !important;
 }
 
 /* Resource hub */
@@ -574,6 +680,18 @@
   .signup-description,
   .signup-note {
     margin-left: 0;
+  }
+
+  .newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-fields {
+    grid-template-columns: 1fr !important;
+  }
+
+  .newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit {
+    width: 100% !important;
+  }
+
+  .newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-powered-by-convertkit-container {
+    justify-content: flex-start !important;
   }
 
   .briefing-banner {

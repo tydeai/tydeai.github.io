@@ -33,7 +33,7 @@ The site will be available at `https://tydeai.github.io/`. The `.nojekyll` file 
 ## Content and integrations
 
 - Page content, portraits, service imagery and audience graphics are based on Tyde’s website. Fonts and images are stored locally in `assets/`.
-- Newsletter signup currently opens an email to Tyde; connect a newsletter provider to host signup directly here.
+- Newsletter signup is connected to the Kit inline form `0db0490d2e`. Subscribers are collected and managed in the Tyde Kit account; Kit also handles the confirmation and error messages. The free-plan Kit attribution remains visible.
 - The resource workshop uses a local poster and loads YouTube’s privacy-enhanced embed only when Play is selected. A direct YouTube link remains available if embedding is blocked or JavaScript is disabled.
 - Service enquiries open an email to `info@tydeai.com`; job application links open Tyde’s LinkedIn page, as on the reference site. There is no local form backend.
 - Careers and workshop information reflect the reference pages at implementation time; update them as listings and events change.
