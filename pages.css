@@ -282,7 +282,7 @@
 }
 
 /* Kit injects its own inline theme; these overrides keep the working form on-brand. */
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] {
   width: 100% !important;
   min-width: 0 !important;
   max-width: 580px !important;
@@ -293,31 +293,31 @@
   box-shadow: none !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] [data-style="minimal"] {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] [data-style="minimal"] {
   padding: 0 !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-header,
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-subheader,
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-guarantee {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-header,
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-subheader,
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-guarantee {
   display: none !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-fields {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-fields {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) auto !important;
   gap: 10px !important;
   margin: 0 !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-field,
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-field,
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-submit {
   width: auto !important;
   min-width: 0 !important;
   margin: 0 !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-input {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-input {
   width: 100% !important;
   height: 56px !important;
   padding: 0 20px !important;
@@ -331,12 +331,12 @@
   transition: border-color 180ms ease, box-shadow 180ms ease !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-input:focus {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-input:focus {
   border-color: var(--violet) !important;
   box-shadow: 0 0 0 3px rgba(114, 101, 209, 0.18) !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-submit {
   min-height: 56px !important;
   padding: 0 28px !important;
   border: 0 !important;
@@ -350,13 +350,13 @@
   transition: background 180ms ease, transform 180ms var(--ease) !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit:hover,
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit:focus-visible {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-submit:hover,
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-submit:focus-visible {
   background: var(--violet) !important;
   transform: translateY(-2px) !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-alert {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-alert {
   margin: 0 0 14px !important;
   padding: 12px 16px !important;
   border-radius: 10px !important;
@@ -365,17 +365,17 @@
   text-align: left !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-alert-success {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-alert-success {
   border: 1px solid #a7d8b5 !important;
   background: #edf8f0 !important;
   color: #174c27 !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-alert-error {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-alert-error {
   color: #8b1e2d !important;
 }
 
-.newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-powered-by-convertkit-container {
+.newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-powered-by-convertkit-container {
   margin-top: 12px !important;
   opacity: 0.58 !important;
 }
@@ -682,15 +682,15 @@
     margin-left: 0;
   }
 
-  .newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-fields {
+  .newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-fields {
     grid-template-columns: 1fr !important;
   }
 
-  .newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-submit {
+  .newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-submit {
     width: 100% !important;
   }
 
-  .newsletter-signup .formkit-form[data-uid="0db0490d2e"] .formkit-powered-by-convertkit-container {
+  .newsletter-signup .formkit-form[data-uid="8836cea0ec"] .formkit-powered-by-convertkit-container {
     justify-content: flex-start !important;
   }
 
